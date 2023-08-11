@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.8/dist/cjs/handlebars.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
     <link rel="stylesheet" href="/src/styles/main.css">
     <title>Gallery</title>
   </head>
@@ -18,15 +18,16 @@
   
   <script type="text/x-handlebars-template" id="template">
     {{! this is a comment }}
-    <h1>{{title}}</h1>
-    <ol>
-      {{#each list}}
-        <li>{{this.name}}</li>
+    <h1 class="main-header">{{title}}</h1>
+    <ol class="images">
+      {{#each photos}}
+        <li><img src="/src/json/data/{{{this.baseName}}}" alt="x"></li>
       {{/each}}
     </ol>
     <p>{{footer}}</p>
   </script>
-  
+  <div id="output">
+  </div>
   <script src="js/main.js"></script>
   </body>
 </html>

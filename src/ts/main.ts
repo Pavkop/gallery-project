@@ -1,14 +1,8 @@
-type photo = {
-    title : string,
-    width : number,
-    height : number,
-    size : string,
-    comment?: string
-}
+import Handlebars from "handlebars";
 
 //begin button pressed
 const startGallery = () => {
-    let beginDiv = document.body.querySelector('.begin-div')!; //will not be null;
+    let beginDiv = document.body.querySelector('.begin-div')!;
     beginDiv.classList.add('begin-removed');
     setTimeout(() => {
         beginDiv.remove();
@@ -29,7 +23,9 @@ const fillGallery = () => {
         return res.json();
     }).then((res) => {
         data.photos = res;
-    }).then(() => {
-        console.log(data);
+        // @ts-ignore
+        let template = Handlebars.compile(document.querySelector("#template").innerHTML);
+        // @ts-ignore
+        document.querySelector('#output').innerHTML = template(data);
     });
 }

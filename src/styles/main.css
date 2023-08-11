@@ -38,3 +38,21 @@ button {
     color: white;
     background-color: white;
 }
+.output {
+    text-align: center;
+}
+.images {
+    display: grid;
+    grid-template-columns: 700px 700px;
+    text-align: center;
+    margin: 200px;
+    white-space: nowrap; /*list content next to each other*/
+}
+.images li {
+    display: inline-block;
+    width: 90%;
+    margin: 10px 2%;
+}
+.images li img{
+    max-width: 100%;
+}
