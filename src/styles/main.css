@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, serif;
+}
+button {
+    cursor: pointer;
+}
+.begin-div {
+    margin-top: 250px;
+    text-align: center;
+    font-weight: bold;
+    transition: 1s;
+}
+.begin-btn {
+    border: none;
+    background: #411c0e linear-gradient(90deg, rgba(255, 132, 128, 1) 0%, rgba(255, 33, 114, 1) 67%, rgba(255, 40, 40, 1) 100%);
+    color: white;
+    font-size: 35px;
+    border-radius: 2px;
+    padding: 15px 40px 15px 42px;
+
+    transition: padding 0.3s;
+}
+.begin-btn:hover {
+    padding: 12px 35px 12px 37px;
+}
+.begin-hdr {
+    color: #411c0e;
+    font-size: 65px;
+}
+.begin-removed .begin-btn {
+    transition: 1s ease-in 0.2s;
+    color: white;
+    background: none;
+}
+.begin-removed .begin-hdr {
+    transition: 1s ease-in 0.2s;
+    color: white;
+    background-color: white;
+}

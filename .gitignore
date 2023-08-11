@@ -1,2 +1,4 @@
 main.js
-.idea
+.idea/
+*.jpg
+node_modules/
